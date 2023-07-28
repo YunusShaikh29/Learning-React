@@ -35,9 +35,9 @@ const App = () => {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses expense={expenses}/>
+      <Expenses expense={expenses} />
     </div>
   );
-}
+};
 
 export default App;
