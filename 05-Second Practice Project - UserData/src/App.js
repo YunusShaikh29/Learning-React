@@ -17,10 +17,10 @@ function App() {
   // console.log(userDataArr)
 
   return (
-    <div>
+    <React.Fragment>
       <AddUser onAddingUser={onUserSubmit}/>
       <UserList users={userDataArr}/>
-    </div>
+    </React.Fragment>
   );
 }
 
