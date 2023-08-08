@@ -65,7 +65,7 @@ const AddUser = (props) => {
     
     // as we are using refs, we could simply remove our states
   // const userNameChangeHandler = (event) => {
-  //   // console.log(event.target.value)
+  //   console.log(event.target.value)
   //   setEnteredUserName(event.target.value);
     
   // };
