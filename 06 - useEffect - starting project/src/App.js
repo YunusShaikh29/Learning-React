@@ -25,7 +25,7 @@ function App() {
     // We should of course check email and password
     // But it's just a dummy/ demo anyways
     localStorage.setItem("isLoggedIn", "1");
-    console.log('rendered')
+    // console.log('rendered')
     setIsLoggedIn(true);
   };
 
