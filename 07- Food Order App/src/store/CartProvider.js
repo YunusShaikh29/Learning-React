@@ -15,6 +15,8 @@ const cartReducer = (state, action) => {
       (item) => item.id === action.item.id
     );
 
+    // console.log(state.items)
+
     const existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;
 
@@ -23,13 +25,37 @@ const cartReducer = (state, action) => {
         ...existingCartItem,
         amount: existingCartItem.amount + action.item.amount,
       };
-      updatedItems = [...state.items]
+      updatedItems = [...state.items];
       updatedItems[existingCartItemIndex] = updatedItem;
     } else {
       updatedItems = state.items.concat(action.item);
     }
-
+    console.log(state.items);
     return { items: updatedItems, totalAmount: updatedTotalAmount };
+  }
+  // removing cart items 
+  if (action.identifier === "REMOVE_CART_ITEM") {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    // console.log(existingCartItemIndex)
+
+    const existingCartItem = state.items[existingCartItemIndex];
+
+    const updatedTotalAmount = state.totalAmount - existingCartItem.price;
+    let updatedItems;
+
+    if(existingCartItem.amount === 1){
+      updatedItems = state.items.filter((item) => item.id !== action.id)
+    }else{
+      const updatedItem = {
+        ...existingCartItem, 
+        amount : existingCartItem.amount - 1
+      }
+      updatedItems = [...state.items]
+      updatedItems[existingCartItemIndex] = updatedItem
+    }
+    return {items : updatedItems, totalAmount : updatedTotalAmount}
   }
   return defaultCartState;
 };
