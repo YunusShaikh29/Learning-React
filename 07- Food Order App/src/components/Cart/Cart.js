@@ -6,6 +6,8 @@ import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
+
+  const totalAmount = `₹${cartCtx.totalAmount.toFixed(2)}`
   const hasItems = cartCtx.items.length > 0;
 
   const onAddCartItem = item => {
@@ -37,7 +39,7 @@ const Cart = (props) => {
       {CartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>{cartCtx.totalAmount}</span>
+        <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={props.onHideCart}>
