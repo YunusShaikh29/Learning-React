@@ -53,6 +53,9 @@ function App() {
   }, [fetchMoviesHandler]);
 
   async function addMovieHandler(movie) {
+    if(movie.title.trim().length === 0 || movie.releaseDate.trim().length === 0 || movie.openingText.trim().length === 0){
+      return 
+    }
     const response = await fetch(
       "https://react-http-5b56a-default-rtdb.firebaseio.com/movies.json",
       {
