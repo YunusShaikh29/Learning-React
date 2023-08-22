@@ -41,7 +41,7 @@ const AvailabeMeals = () => {
     const fetchMeals = async () => {
       // try {
       const response = await fetch(
-        "https://food-buddy-app-89d1d-default-rtdb.firebaseio.com/meals"
+        "https://food-buddy-app-89d1d-default-rtdb.firebaseio.com/meals.json"
       );
 
       if (!response.ok) {
@@ -80,7 +80,7 @@ const AvailabeMeals = () => {
 
   if(isError){
     return <section className={classes.hasError}>
-      <p>{isError}</p>
+      <p>{`${isError} ⚠️`}</p>
     </section>
   }
 
