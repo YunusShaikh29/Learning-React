@@ -2,24 +2,6 @@ import { useState } from "react";
 import useInput1 from "../hooks/use-input1";
 
 const BasicForm = (props) => {
-  // const [enteredFirstName, setEnteredFirstName] = useState("");
-  // const [enteredFirstNameIsTouchd, setEnteredFirstNameIsTouched] = useState(false);
-
-  // const [enteredLastName, setEnteredLastName] = useState("");
-  // const [enteredLastNameIsTouched, setEnteredLastNameIsTouched] =
-  //   useState(false);
-
-  // const [enteredEmail, setEnteredEmail] = useState("");
-  // const [enteredEmailIsTouched, setEnteredEmailIsTouched] = useState(false);
-
-  // const firstNameIsValid = enteredFirstName.trim() !== ''
-  // const firstNameIsInvalid = !firstNameIsValid && enteredFirstNameIsTouchd
-
-  // const lastNameIsValid = enteredLastName.trim() !== ''
-  // const lastNameIsInvalid = !lastNameIsValid && enteredLastNameIsTouched
-
-  // const emailIsValid = enteredEmail.trim().includes('@')
-  // const emailIsInvalid = !emailIsValid && enteredEmailIsTouched
 
   const isNotEmpty = value => value.trim() !== ''
 
@@ -56,47 +38,16 @@ const BasicForm = (props) => {
     formIsValid = true;
   }
 
-  // const onFirstNameInputChange = (event) => {
-  //   setEnteredFirstName(event.target.value);
-  // };
-  // const onFirstNameInputBlur = () => {
-  //   setEnteredFirstNameIsTouched(true);
-  // };
-
-  // const onLastNameInputChange = (event) => {
-  //   setEnteredLastName(event.target.value);
-  // };
-  // const onLastNameInputBlur = () => {
-  //   setEnteredLastNameIsTouched(true);
-  // };
-
-  // const onEmailInputChange = (event) => {
-  //   setEnteredEmail(event.target.value);
-  // };
-  // const onEmailInputBlur = () => {
-  //   setEnteredEmailIsTouched(true);
-  // };
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    // setEnteredFirstNameIsTouched(true);
-    // setEnteredLastNameIsTouched(true);
-    // setEnteredEmailIsTouched(true);
 
     if (!firstNameIsValid && !lastNameIsValid && !emailIsValid) {
       return;
     }
 
     console.log(enteredFirstName, enteredLastName, enteredEmail);
-
-    // setEnteredFirstName("");
-    // setEnteredLastName("");
-    // setEnteredEmail("");
-
-    // setEnteredFirstNameIsTouched(false);
-    // setEnteredLastNameIsTouched(false);
-    // setEnteredEmailIsTouched(false);
 
     resetFirstName()
     resetLastName()
