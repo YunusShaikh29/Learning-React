@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import {  } from "react";
 import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
@@ -21,7 +21,7 @@ const SimpleInput = (props) => {
   } = useInput(
     (value) =>
       value.trim().includes("@") &&
-      value.trim().length > 0 &&
+      value.trim().length > 4 &&
       value.trim().includes(".")
   );
 
