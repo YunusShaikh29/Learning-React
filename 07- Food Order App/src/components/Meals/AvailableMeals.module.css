@@ -9,14 +9,14 @@
   .mealsLoading{
     text-align: center;
     color: #ad5502;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 
   .hasError{
     text-align: center;
     color: rgb(231, 94, 94);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
   }
   
