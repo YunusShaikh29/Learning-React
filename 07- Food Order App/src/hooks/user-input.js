@@ -10,9 +10,10 @@ const inputStateReducer = (state, action) => {
 }
 
 const userInput = (validate) => {
-  const [userValue, dispatch] = useReducer(inputStateReducer, initialState);
+  const [inputState, dispatch] = useReducer(inputStateReducer, initialState);
 
-    
+  const valueIsValid = validate(inputState.value)
+//   const hasError 
 
 };
 
