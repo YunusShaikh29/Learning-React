@@ -11,8 +11,8 @@ const Counter = () => {
     dispatch({ type : 'increment'})
   }
 
-  const increaseBy5 = () => {
-    dispatch({type : 'increase', amount : 5})
+  const increaseBy10 = () => {
+    dispatch({type : 'increase', amount : 10})
   }
 
   const decrementCounter = () => {
@@ -29,7 +29,7 @@ const Counter = () => {
       {showORHide && <div className={classes.value}>{counter}</div>}
       <div>
         <button onClick={incrementCounter}>Increment</button>
-        <button onClick={increaseBy5}>increaseBy 5</button>
+        <button onClick={increaseBy10}>increaseBy 10</button>
         <button onClick={decrementCounter}>Decrement</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
