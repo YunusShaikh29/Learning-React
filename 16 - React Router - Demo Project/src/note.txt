@@ -1,0 +1,3 @@
+1st create router
+2nd set proper paths and jsx/components
+3rd Use the router or set the router with router provider

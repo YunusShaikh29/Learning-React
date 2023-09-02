@@ -5,13 +5,6 @@ import { cartActions } from "./cart-slice";
 
 export const fetchCartData = () => {
   return async (dispatch) => {
-    // dispatch(
-    //   uiActions.showNotification({
-    //     status: "Fetching",
-    //     title: "Fetching...",
-    //     message: "Fetching the cart data",
-    //   })
-    // );
 
     const fetchData = async () => {
       const response = await fetch(
@@ -30,13 +23,7 @@ export const fetchCartData = () => {
         items : cartData.items || [],
         totalQuantity : cartData.totalQuantity
       }))
-    //   dispatch(
-    //     uiActions.showNotification({
-    //       status: "success",
-    //       title: "Success!",
-    //       message: "Fetched the cart data successfully! 🎉",
-    //     })
-    //   );
+    
     } catch (error) {
       dispatch(
         uiActions.showNotification({
