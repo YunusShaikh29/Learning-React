@@ -1,18 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { uiActions } from "./ui-slice";
+// import { uiActions } from "./ui-slice";
 
 const cartSlice = createSlice({
   name: "cartSlice",
   initialState: {
     items: [],
     totalQuantity: 0,
+    changed : false,
     // totalPriceAmount : 0
   },
   reducers: {
+    replaceCart(state, action) {
+        state.totalQuantity = action.payload.totalQuantity;
+        state.items = action.payload.items;
+      },
     addCartItem(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.totalQuantity++;
+      state.changed = true
       if (!existingItem) {
         state.items.push({
           id: newItem.id,
@@ -30,6 +36,7 @@ const cartSlice = createSlice({
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       state.totalQuantity--;
+      state.changed = true
       if (existingItem.quantity === 1) {
         state.items = state.items.filter((item) => item.id !== id);
       } else {
@@ -40,53 +47,6 @@ const cartSlice = createSlice({
   },
 });
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ ACTION CREATOR FUNCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-export const sendCartData = (cart) => {
-  return async (dispatch) => {
-    dispatch(
-      uiActions.showNotification({
-        status: "pending",
-        title: "Sending...",
-        message: "Sending the cart data",
-      })
-    );
-
-    const sendRequest = async () => {
-      const response = await fetch(
-        "https://react-reducer-ce23c-default-rtdb.asia-southeast1.firebasedatabase.app/cart.json",
-        {
-          method: "PUT",
-          body: JSON.stringify(cart),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-    };
-
-    try {
-      await sendRequest();
-
-      dispatch(
-        uiActions.showNotification({
-          status: "success",
-          title: "Success!",
-          message: "Sent the cart data successfully! 🎉",
-        })
-      );
-    } catch (error) {
-      dispatch(
-        uiActions.showNotification({
-          status: "error",
-          title: "Error",
-          message: error.message,
-        })
-      );
-    }
-  };
-};
 
 export const cartActions = cartSlice.actions;
 
