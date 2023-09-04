@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <h1>This is my home! 🏡</h1>
-      <p>Go to <Link to='/products'>the Products page</Link></p>
+      <p>Go to <Link to='products'>the Products page</Link></p>
     </>
   );
 };
