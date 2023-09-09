@@ -1,6 +1,6 @@
 // import { useEffect, useState } from 'react';
 
-import { useLoaderData } from "react-router-dom";
+import { json, useLoaderData } from "react-router-dom";
 import EventsList from "../components/EventsList";
 
 function EventsPage() {
@@ -20,7 +20,6 @@ export const loader = async () => {
   const response = await fetch("http://localhost:8080/events");
 
   if (!response.ok) {
-    //... will handle errors later
     // // one way of handling error would be
     // return { isError: true, message: "Could not fetch events." };
 
@@ -28,9 +27,12 @@ export const loader = async () => {
     // throw { message : 'Could not fetch events!'}
 
     //we can throw the responses and then use them to output error messages!
-    throw new Response(JSON.stringify({ message: "Could not fetch events!" }), {
-      status: 500,
-    });
+    // throw new Response(JSON.stringify({ message: "Could not fetch events!" }), {
+    //   status: 500,
+    // });
+
+    //json(): provided by r-r-d, which automatically converts the data into json format
+    throw json({message : 'Could not fetch events!'}, {status : 500})
   } else {
     // const resData = await response.json();
     // return resData.events;

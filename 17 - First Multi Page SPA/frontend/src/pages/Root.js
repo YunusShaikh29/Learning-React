@@ -1,5 +1,5 @@
 import classes from './Root.module.css'
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import MainNavigation from "../components/MainNavigation";
 
 const RootLayout = () => {
@@ -9,10 +9,10 @@ const RootLayout = () => {
   return (
     <>
       <MainNavigation />
-      <main className={classes.content}>
+      
         {/* {navigation.state === 'loading' && <p>Loading</p>} */}
         <Outlet />
-      </main>
+      
     </>
   );
 };

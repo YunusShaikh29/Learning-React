@@ -9,7 +9,8 @@ const ErrorPage = () => {
   let message = "Something went wrong!";
 
   if (error.status === 500) {
-    message = JSON.parse(error.data).message;
+    // message = JSON.parse(error.data).message; // by using Response()
+    message = error.data.message; // by using json() by r-r-d. automatically converts the data.
   }
   if (error.status === 404) {
     title = "Not Found";
