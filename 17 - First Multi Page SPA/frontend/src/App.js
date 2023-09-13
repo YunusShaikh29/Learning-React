@@ -6,10 +6,11 @@ import EventDetailPage, {
   action as deleteEventAction,
 } from "./pages/EventDetailPage";
 import EventsPage, { loader as eventsLoader } from "./pages/Events";
-import NewEventPage, {action as newEventAction} from "./pages/NewEventPage";
+import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
 import EventRootLayout from "./pages/EventRoot";
 import ErrorPage from "./pages/Error";
+import ManipulateAction from "./pages/ManipulateAction";
 // Challenge / Exercise
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
@@ -58,10 +59,10 @@ const router = createBrowserRouter([
                 element: <EventDetailPage />,
                 action : deleteEventAction
               },
-              { path: "edit", element: <EditEventPage /> },
+              { path: "edit", element: <EditEventPage />,action: ManipulateAction },
             ],
           },
-          { path: "new", element: <NewEventPage />, action : newEventAction },
+          { path: "new", element: <NewEventPage />, action : ManipulateAction },
         ],
       },
     ],
