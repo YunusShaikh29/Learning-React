@@ -11,6 +11,8 @@ import EditEventPage from "./pages/EditEventPage";
 import EventRootLayout from "./pages/EventRoot";
 import ErrorPage from "./pages/Error";
 import ManipulateAction from "./pages/ManipulateAction";
+import NewsletterPage, {action as newsletterAction } from "./pages/Newsletter";
+
 // Challenge / Exercise
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
@@ -65,7 +67,13 @@ const router = createBrowserRouter([
           { path: "new", element: <NewEventPage />, action : ManipulateAction },
         ],
       },
+      {
+        path : 'newsletter',
+        element : <NewsletterPage />,
+        action : newsletterAction
+      },
     ],
+    
   },
 ]);
 
