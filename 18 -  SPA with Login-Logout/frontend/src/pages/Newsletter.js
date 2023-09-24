@@ -1,10 +1,12 @@
+import { useRouteLoaderData } from 'react-router-dom';
 import NewsletterSignup from '../components/NewsletterSignup';
 import PageContent from '../components/PageContent';
 
 function NewsletterPage() {
+  const token = useRouteLoaderData('root')
   return (
     <PageContent title="Join our awesome newsletter!">
-      <NewsletterSignup />
+       {token && <NewsletterSignup />}
     </PageContent>
   );
 }
