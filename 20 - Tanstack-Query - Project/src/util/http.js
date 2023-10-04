@@ -91,3 +91,23 @@ export const deleteEvent = async ({id}) => {
 
   return message
 }
+
+
+export const updateEvent = async ({id, event}) => {
+  const response = await fetch(`http://localhost:3000/events/${id}`, {
+    method : 'PUT',
+    body : JSON.stringify({event}),
+    headers : {
+      'Content-Type': 'application/json'
+    }
+  })
+
+  if(!response.ok){
+    const error = new Error('Could not update the event!')
+    error.code = response.status;
+    error.info = await response.json()
+    throw error
+  }
+
+  return response.json()
+}
