@@ -1,39 +1,40 @@
-let age: number = 23
+let age: number = 23;
 
-let userName:string;
+let userName: string;
 
-userName = '23'
+userName = "23";
 
-let person: {}
+let person: {};
 
 person = {
-    name: 'yunus', 
-    age: 21,
-    jobless: true
-}
+  name: "yunus",
+  age: 21,
+  jobless: true,
+};
 
 // person = 23
 
-let users: string[] = ['something', 'value', 'data']
+let users: string[] = ["something", "value", "data"];
 
 let newPerson: {
-    name: string,
-    age: number,
-    isDeveloper: boolean
-}
+  name: string;
+  age: number;
+  isDeveloper: boolean;
+};
 
 newPerson = {
-    name: 'Yunus',
-    age: 21,
-    isDeveloper: true
-}
-
+  name: "Yunus",
+  age: 21,
+  isDeveloper: true,
+};
 
 /* WE can create an array full of a specific type of object with this syntax 👇 */
-let people: {name: string, age: number}[];
+let people: { name: string; age: number }[];
 
-people = [{name: '25', age: 21 }, {name: 'Josh', age: 32}]
-
+people = [
+  { name: "25", age: 21 },
+  { name: "Josh", age: 32 },
+];
 
 /* Type  Inference! */
 
@@ -48,38 +49,87 @@ people = [{name: '25', age: 21 }, {name: 'Josh', age: 32}]
 
 Union types allow us to add more flexible and values and types! For example a number or a string to be stored in a variable.
 */
-let course: (string | number )[]
+let course: (string | number)[];
 
-course = [21, 22,23,34, 'something', 'anything', 'string3']
-
+course = [21, 22, 23, 34, "something", "anything", "string3"];
 
 /* Type Aliases */
 
 type newPerson = {
-    name: string,
-    age: number,
-    learningReact : boolean
-}
+  name: string;
+  age: number;
+  learningReact: boolean;
+};
 
 let person1: newPerson;
 
 person1 = {
-    name: 'Auof', 
-    age: 21,
-    learningReact: true
-}
+  name: "Auof",
+  age: 21,
+  learningReact: true,
+};
 
 let person2: newPerson = {
-    name: 'Hady', 
-    age: 21, 
-    learningReact: true
+  name: "Hady",
+  age: 21,
+  learningReact: true,
+};
+
+function addition(a: number, b: number) {
+  return a + b;
 }
 
-
-function addition(a:number, b:number){
-    return a + b
+function printOutput(value: any) {
+  console.log(value);
 }
 
-function printOutput(value: any){
-    console.log(value);
+// let questions = [
+//   {
+//     title: "biggest number",
+//     description: "Write a code to get the biggest number from the array",
+//     "test-cases": [
+//       {
+//         input: [2, 3, 4, 5],
+//         output: 5,
+//       },
+//     ],
+//   },
+// ];
+
+// let myQuestions: {
+//   title: string;
+//   description: string;
+//   "test-cases": { input: number[]; output: number }[];
+// }[];
+
+// myQuestions = [
+//   {
+//     title: "string",
+//     description: "some description",
+//     "test-cases": [{ input: [2, 3, 3], output: 34 }],
+//   },
+//   {
+//     title: "string",
+//     description: "some description",
+//     "test-cases": [{ input: [2, 3, 3], output: 34 }],
+//   },
+//   {
+//     title: "string",
+//     description: "some description",
+//     "test-cases": [{ input: [2, 3, 3], output: 34 }],
+//   },
+
+// ];
+
+/* Generics */
+
+
+function insertAtBeginning<ourtype>(array: ourtype[], value: ourtype){
+    const newArray = [value, ...array]
+    return newArray
 }
+
+const demoArray = [1,2,3,4,5]
+
+const updatedArray = insertAtBeginning(demoArray, -1)
+const stringArray = insertAtBeginning(['1','2','3','4'], '0')

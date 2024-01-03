@@ -1,1 +1,47 @@
-{"events":[{"title":"new event 2!!!!!!!","image":"https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg","date":"2023-09-03","description":"event","id":"50d97793-b10a-4f45-9de0-0aa898ddf62c"},{"title":"First event","image":"https://5.imimg.com/data5/CF/MA/MY-11451915/event-planning-500x500.jpg","date":"2023-09-11","description":"Join this event happening after adding the token!","id":"fe5985b3-b001-4482-8bab-9e2d985523d2"}],"users":[{"email":"something@something.com","password":"$2a$12$O4aCJrA4jVjasJvgxdguK.iPFZvwL5YOPWjrujm2bBNv.L5HyidzW","id":"edd38ce9-d34b-4885-8fa9-17f13b87b607"},{"email":"test2@test.com","password":"$2a$12$sIVfpjFo7scMAgrGbew6n.hPH4F.9W.VfUvznlqbW8ddaPuDOUQQy","id":"8c259c7c-6f06-4012-b2bd-9f86d2fad2a0"},{"email":"goat@goat.com","password":"$2a$12$DiX7v2v0yqvoNbFx8PFXRe.ZPMV4yxKKw5/TUeAuAuNPBnlF3RITW","id":"234946c6-38b0-4566-8747-51da887eb295"}]}
+{
+  "events": [
+    {
+      "title": "third event",
+      "image": "https://media.istockphoto.com/id/499517325/photo/a-man-speaking-at-a-business-conference.jpg?s=612x612&w=0&k=20&c=gWTTDs_Hl6AEGOunoQ2LsjrcTJkknf9G8BGqsywyEtE=",
+      "date": "2024-01-18",
+      "description": "dfasdfasdfadfafdadfasdfasdfaef",
+      "id": "04881bc9-96cc-46b3-be59-197d0e3456e1"
+    },
+    {
+      "title": "new event 2!!!!!!!",
+      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
+      "date": "2023-09-03",
+      "description": "event",
+      "id": "50d97793-b10a-4f45-9de0-0aa898ddf62c"
+    },
+    {
+      "title": "First event",
+      "image": "https://5.imimg.com/data5/CF/MA/MY-11451915/event-planning-500x500.jpg",
+      "date": "2023-09-11",
+      "description": "Join this event happening after adding the token!",
+      "id": "fe5985b3-b001-4482-8bab-9e2d985523d2"
+    }
+  ],
+  "users": [
+    {
+      "email": "something@something.com",
+      "password": "$2a$12$O4aCJrA4jVjasJvgxdguK.iPFZvwL5YOPWjrujm2bBNv.L5HyidzW",
+      "id": "edd38ce9-d34b-4885-8fa9-17f13b87b607"
+    },
+    {
+      "email": "test2@test.com",
+      "password": "$2a$12$sIVfpjFo7scMAgrGbew6n.hPH4F.9W.VfUvznlqbW8ddaPuDOUQQy",
+      "id": "8c259c7c-6f06-4012-b2bd-9f86d2fad2a0"
+    },
+    {
+      "email": "goat@goat.com",
+      "password": "$2a$12$DiX7v2v0yqvoNbFx8PFXRe.ZPMV4yxKKw5/TUeAuAuNPBnlF3RITW",
+      "id": "234946c6-38b0-4566-8747-51da887eb295"
+    },
+    {
+      "email": "yunus@gmail.com",
+      "password": "$2a$12$.1O8N2O9IlP8zbuNGzIs/.i5G87j5rNqBOgKSxO6RKAG7oqspWMVy",
+      "id": "c52dd156-c886-4a29-ad01-dcb1449efdbb"
+    }
+  ]
+}
